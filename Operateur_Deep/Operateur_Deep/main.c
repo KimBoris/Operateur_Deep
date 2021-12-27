@@ -5,7 +5,7 @@ int main(void)
 
 	//직접적인 숫자 계산처럼 보이지는 않지만 명백히 연산자가 맞는 연산자들도 있다
 	//그리고 sizeof처럼 컴파일러가 수행하고 CPU가 실행하지 않는 특수한 연산자도 있다
-	int aList[5] = 	{ 0 };
+	int aList[5] = { 0 };
 
 	printf("%d\n", sizeof(aList));
 	printf("%d\n", 20);
@@ -28,5 +28,25 @@ int main(void)
 	//이러한 오차로 인해 실수는 활용하지 않는다.
 
 	printf("%d\n", 2147483600.0f == 2147483648.0f); //값이 다르지만 같다고 나온다 부동소수점 처리로 인해
+
+
+	int tall = 0;
+	printf("키를 입력하세요\n");
+	scanf_s("%d", &tall);
+	(tall >= 160) ? printf("합격") : printf("불합격");
+
+
+	//3항 연산자의 장점
+
+	int nData = 0, nInput;
+	scanf_s("%d", &nInput);
+	if (nInput > 5)
+	{
+		nData = 10;
+	}
+	else
+		nData = 0;
+
+	nInput > 5 ? (nData = 10) : (nData = 0);
 	return 0;
 }
